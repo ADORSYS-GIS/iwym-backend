@@ -6,6 +6,8 @@ site_url: 'https://adorsys-gis.github.io/iwym-backend'
 # Theme settings
 theme:
   name: material
+  palette:
+    scheme: slate
 
 # Navbar settings (site structure)
 nav:
