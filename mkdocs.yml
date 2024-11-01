@@ -1,0 +1,25 @@
+# Project information
+site_name: Local Payment Solution
+site_description: 'An example MkDocs project using the Material theme'
+site_url: 'https://adorsys-gis.github.io/iwym-backend'
+
+# Theme settings
+theme:
+  name: material
+
+# Navbar settings (site structure)
+nav:
+  - ARC42: ARC42.md
+  - Home: README.md
+
+# Extra settings
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+
+# Repository configuration (for the edit link on pages)
+repo_name: ADORSYS-GIS/iwym-backend
+repo_url: https://github.com/ADORSYS-GIS/iwym-backend
+edit_uri: edit/main/docs/
