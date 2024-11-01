@@ -103,18 +103,18 @@ The local payment processor acts as an intermediary between **merchants** and **
 ```mermaid
 graph TD
     A[API Gateway] --> B[Payment Service]
-    A --> C[Merchant Service]
-    A --> D[Customer Service]
+    A --> C["Merchant Service"]
+    A --> D["Customer Service"]
     A --> E[Webhook Service]
-    B --> F[(PostgreSQL)]
+    B --> F["PostgreSQL"]
     C --> F
     D --> F
     E --> F
-    B --> G[Redis (BullMQ)]
+    B --> G["Redis (BullMQ)"]
     C --> G
     D --> G
     E --> G
-    H[Frontend (Next.js)] --> A
+    H["Frontend (Next.js)"] --> A
 ```
 
 ---
@@ -161,16 +161,14 @@ sequenceDiagram
 #### Deployment Diagram (Plain Text for Mermaid)
 ```mermaid
 graph LR
-    A[Kubernetes Cluster]
-    A --> B[Namespace: Dev]
-    A --> C[Namespace: Staging]
-    A --> D[Namespace: Production]
-    D --> E[API Gateway]
-    D --> F[Payment Service]
-    D --> G[Merchant Service]
-   
-
- D --> H[Redis (BullMQ)]
+    A["Kubernetes Cluster"]
+    A --> B["Namespace: Dev"]
+    A --> C["Namespace: Staging"]
+    A --> D["Namespace: Production"]
+    D --> E["API Gateway"]
+    D --> F["Payment Service"]
+    D --> G["Merchant Service"]
+    D --> H["Redis (BullMQ)"]
     D --> I[PostgreSQL]
     D --> J[S3 Storage]
     D --> K[Webhook Service]
