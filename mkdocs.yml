@@ -8,6 +8,7 @@ theme:
   name: material
   palette:
     scheme: slate
+    primary: teal
 
 # Navbar settings (site structure)
 nav:
