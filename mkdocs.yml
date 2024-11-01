@@ -18,6 +18,11 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 # Repository configuration (for the edit link on pages)
 repo_name: ADORSYS-GIS/iwym-backend
