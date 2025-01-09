@@ -12,8 +12,10 @@ theme:
 
 # Navbar settings (site structure)
 nav:
-  - ARC42: ARC42.md
   - Home: README.md
+  - Docs:
+    - ARC42: ARC42.md
+    - Docs: tech.md
 
 # Extra settings
 markdown_extensions:

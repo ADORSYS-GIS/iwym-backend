@@ -11,7 +11,7 @@ market. The solution will empower **merchants** to accept payments via **local m
 Mobile Money and Orange Money. Initially scoped as a **proof of concept (PoC)**, this system will support additional
 features and services, such as **cross-border payments** and multi-tenancy, to accommodate future expansion.
 
-The platform provides merchants with a **RESTful API** and **RPC API** for payment processing, **SDKs and plugins** for
+The platform provides merchants with a **RPC API** for payment processing, **SDKs and plugins** for
 easy integration, and a **dashboard interface** to monitor transactions, manage funds, and perform financial operations.
 Our primary focus is a **scalable, secure, and cost-effective solution** that leverages cloud-native features and
 integrates with **Kubernetes (EKS)** for autoscaling and resilience.
@@ -38,7 +38,7 @@ integrates with **Kubernetes (EKS)** for autoscaling and resilience.
 
 ### Technology Constraints
 
-- **Backend**: Built entirely in **Rust**, supporting both REST and RPC APIs for high performance and efficiency.
+- **Backend**: Built entirely in **Rust**, supporting RPC APIs for high performance and efficiency.
 - **Frontend**: Built with **Next.js** for a seamless, responsive merchant dashboard, hosted on **Vercel** or
   Kubernetes.
 - **Database**: **PostgreSQL** for structured data storage, including multi-tenant support and indexing for efficient
@@ -85,7 +85,7 @@ managing accounts**, and backend services to handle **webhooks, payment processi
 
 ### Technology Choices
 
-- **Backend**: Fully built in **Rust** for both REST and RPC APIs.
+- **Backend**: Fully built in **Rust** for RPC APIs.
 - **Frontend**: **Next.js** to build a dynamic, interactive dashboard with real-time transaction visibility.
 - **Database**: **PostgreSQL** as the primary database, supporting structured data and multi-tenant operations.
 - **Authentication**: **Keycloak** for centralized, flexible authentication and authorization.
