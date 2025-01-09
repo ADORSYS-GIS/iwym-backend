@@ -1,0 +1,1525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="An example MkDocs project using the Material theme">
+      
+      
+      
+        <link rel="canonical" href="https://adorsys-gis.github.io/iwym-backend/ARC42/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../tech/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>ARC42 - Local Payment Solution</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#arc42-template-for-iwym-backend" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Local Payment Solution" class="md-header__button md-logo" aria-label="Local Payment Solution" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Local Payment Solution
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ARC42
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ADORSYS-GIS/iwym-backend" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ADORSYS-GIS/iwym-backend
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Local Payment Solution" class="md-nav__button md-logo" aria-label="Local Payment Solution" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Local Payment Solution
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ADORSYS-GIS/iwym-backend" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ADORSYS-GIS/iwym-backend
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ARC42
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ARC42
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-and-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction and Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction and Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Goals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-context-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Context and Scope
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Context and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Actors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-solution-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Solution Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Solution Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resilience-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resilience Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssdlc-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSDLC Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-building-block-view-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Building Block View (Architecture Overview)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Building Block View (Architecture Overview)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-runtime-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Runtime View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Runtime View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-workflow-payment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Workflow: Payment Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-deployment-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Deployment View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Deployment View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-cutting-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Cross-Cutting Concerns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Cross-Cutting Concerns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssdlc-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSDLC Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-architectural-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Architectural Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-quality-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Quality Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Quality Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-risks-and-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Risks and Technical Debt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Glossary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tech/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduction-and-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introduction and Goals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introduction and Goals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Goals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Non-Goals
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regulatory-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regulatory Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operational-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operational Constraints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-context-and-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Context and Scope
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Context and Scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#system-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      System Context
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primary-actors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Primary Actors
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-solution-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Solution Strategy
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Solution Strategy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#technology-choices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Technology Choices
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resilience-strategy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resilience Strategy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssdlc-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSDLC Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-building-block-view-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Building Block View (Architecture Overview)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Building Block View (Architecture Overview)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#component-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Component Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-runtime-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Runtime View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Runtime View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-workflow-payment-process" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Workflow: Payment Process
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#runtime-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Runtime Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-deployment-view" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Deployment View
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Deployment View">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#infrastructure-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Infrastructure Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deployment-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment Diagram
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-cross-cutting-concerns" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Cross-Cutting Concerns
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Cross-Cutting Concerns">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logging-and-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging and Monitoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Error Handling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ssdlc-practices_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      SSDLC Practices
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-architectural-decisions" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Architectural Decisions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-quality-requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Quality Requirements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Quality Requirements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Performance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Security
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#availability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Availability
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-risks-and-technical-debt" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Risks and Technical Debt
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-glossary" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Glossary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="arc42-template-for-iwym-backend">ARC42 Template for IWYM Backend<a class="headerlink" href="#arc42-template-for-iwym-backend" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-introduction-and-goals">1. Introduction and Goals<a class="headerlink" href="#1-introduction-and-goals" title="Permanent link">&para;</a></h2>
+<h3 id="project-overview">Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">&para;</a></h3>
+<p>This project aims to develop a <strong>local payment processor</strong> akin to Stripe, specifically tailored for the Cameroonian
+market. The solution will empower <strong>merchants</strong> to accept payments via <strong>local mobile money platforms</strong> such as MTN
+Mobile Money and Orange Money. Initially scoped as a <strong>proof of concept (PoC)</strong>, this system will support additional
+features and services, such as <strong>cross-border payments</strong> and multi-tenancy, to accommodate future expansion.</p>
+<p>The platform provides merchants with a <strong>RPC API</strong> for payment processing, <strong>SDKs and plugins</strong> for
+easy integration, and a <strong>dashboard interface</strong> to monitor transactions, manage funds, and perform financial operations.
+Our primary focus is a <strong>scalable, secure, and cost-effective solution</strong> that leverages cloud-native features and
+integrates with <strong>Kubernetes (EKS)</strong> for autoscaling and resilience.</p>
+<h3 id="primary-goals">Primary Goals<a class="headerlink" href="#primary-goals" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Simplify Payment Integration</strong>: Provide developers and merchants with <strong>API and SDK tools</strong> for easy implementation
+   of mobile payments and support for plug-and-play integrations.</li>
+<li><strong>Ensure Security</strong>: Implement end-to-end encryption, <strong>API key and JWT authentication</strong>, and a **double-entry ledger
+   ** for secure and traceable transactions.</li>
+<li><strong>Scale with Demand</strong>: Utilize Kubernetes to dynamically scale service instances, managing traffic spikes and high
+   transaction volumes.</li>
+<li><strong>Optimize Cost Efficiency</strong>: Transition fully to <strong>Rust-based high-performance backend</strong> and <strong>PostgreSQL</strong>.</li>
+<li><strong>Reproducible Development Environments</strong>: Use <strong>Docker</strong> to ensure consistent and reproducible development setups.</li>
+</ol>
+<h3 id="non-goals">Non-Goals<a class="headerlink" href="#non-goals" title="Permanent link">&para;</a></h3>
+<ul>
+<li>No <strong>credit card support</strong>: This phase focuses on mobile money payments only.</li>
+<li>No <strong>international payment support</strong>: Local transactions only; international expansion may be scoped later.</li>
+</ul>
+<hr />
+<h2 id="2-constraints">2. Constraints<a class="headerlink" href="#2-constraints" title="Permanent link">&para;</a></h2>
+<h3 id="technology-constraints">Technology Constraints<a class="headerlink" href="#technology-constraints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Backend</strong>: Built entirely in <strong>Rust</strong>, supporting RPC APIs for high performance and efficiency.</li>
+<li><strong>Frontend</strong>: Built with <strong>Next.js</strong> for a seamless, responsive merchant dashboard, hosted on <strong>Vercel</strong> or
+  Kubernetes.</li>
+<li><strong>Database</strong>: <strong>PostgreSQL</strong> for structured data storage, including multi-tenant support and indexing for efficient
+  query performance.</li>
+<li><strong>Authentication</strong>: <strong>Keycloak</strong> for robust, centralized authentication and authorization management.</li>
+<li><strong>Storage</strong>: S3-compatible storage like <strong>Minio</strong> for managing immutable data such as receipts, invoices,
+  proof-of-purchase PDFs, user-uploaded documents, snapshots, and backups.</li>
+</ul>
+<h3 id="regulatory-constraints">Regulatory Constraints<a class="headerlink" href="#regulatory-constraints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Financial Compliance</strong>: Comply with <strong>Cameroonian financial regulations</strong>, including obtaining the necessary
+  licenses to operate as a payment processor.</li>
+<li><strong>Data Privacy</strong>: Ensure compliance with data protection standards (GDPR or similar) to secure customer and
+  transaction data.</li>
+</ul>
+<h3 id="operational-constraints">Operational Constraints<a class="headerlink" href="#operational-constraints" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Budget Optimization</strong>: Use cost-effective solutions such as managed Kubernetes (AWS EKS or GKE) with optimized cloud
+  infrastructure and autoscaling to meet fluctuating demand.</li>
+</ul>
+<hr />
+<h2 id="3-context-and-scope">3. Context and Scope<a class="headerlink" href="#3-context-and-scope" title="Permanent link">&para;</a></h2>
+<h3 id="system-context">System Context<a class="headerlink" href="#system-context" title="Permanent link">&para;</a></h3>
+<p>The local payment processor acts as an intermediary between <strong>merchants</strong> and <strong>mobile money providers</strong> (MTN MoMo and
+Orange Money). It provides <strong>API endpoints</strong> for merchants to initiate transactions, a <strong>dashboard for monitoring and
+managing accounts</strong>, and backend services to handle <strong>webhooks, payment processing,</strong> and <strong>payouts</strong>.</p>
+<h3 id="primary-actors">Primary Actors<a class="headerlink" href="#primary-actors" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Merchants</strong>: Businesses or individuals utilizing the API for payment processing, integrating it with their
+   platforms, and managing their funds via the dashboard.</li>
+<li><strong>Customers</strong>: Individuals completing payments using their mobile money wallets.</li>
+<li><strong>Administrator</strong>: Internal user responsible for <strong>account validation</strong>, handling <strong>sandbox-to-production transitions
+   </strong>, and <strong>merchant account management</strong>.</li>
+<li><strong>Payment Providers</strong>: External systems (e.g., MTN MoMo, Orange Money) that process transactions and provide payment
+   confirmations.</li>
+</ol>
+<hr />
+<h2 id="4-solution-strategy">4. Solution Strategy<a class="headerlink" href="#4-solution-strategy" title="Permanent link">&para;</a></h2>
+<h3 id="technology-choices">Technology Choices<a class="headerlink" href="#technology-choices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Backend</strong>: Fully built in <strong>Rust</strong> for RPC APIs.</li>
+<li><strong>Frontend</strong>: <strong>Next.js</strong> to build a dynamic, interactive dashboard with real-time transaction visibility.</li>
+<li><strong>Database</strong>: <strong>PostgreSQL</strong> as the primary database, supporting structured data and multi-tenant operations.</li>
+<li><strong>Authentication</strong>: <strong>Keycloak</strong> for centralized, flexible authentication and authorization.</li>
+<li><strong>Storage</strong>: <strong>S3-compatible storage (Minio)</strong> for assets such as transaction records, invoices, proof of purchase,
+  and backups.</li>
+</ul>
+<h3 id="security-strategy">Security Strategy<a class="headerlink" href="#security-strategy" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Authentication and Authorization</strong>:<ul>
+<li>Centralized management using <strong>Keycloak</strong> for JWT authentication and <strong>API key-based</strong> access for merchants.</li>
+<li><strong>RBAC (Role-Based Access Control)</strong> to manage permissions across different roles (Admin, Merchant, Client).</li>
+</ul>
+</li>
+<li><strong>Encryption</strong>: All communication (internal and external) secured with HTTPS and mTLS (for Kubernetes services).</li>
+<li><strong>Input Validation and Rate Limiting</strong>: Enforce validation to mitigate injection attacks and implement rate limiting
+   to avoid abuse.</li>
+</ol>
+<h3 id="resilience-strategy">Resilience Strategy<a class="headerlink" href="#resilience-strategy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Global Error Handling</strong>: Implement centralized error handling across services and integrate with <strong>Sentry</strong> for
+  error tracking.</li>
+<li><strong>Auto-Scaling and Failover</strong>: Deploy with <strong>Kubernetes HPA</strong> to handle scaling and <strong>cluster failover</strong> to improve
+  availability.</li>
+</ul>
+<h3 id="ssdlc-practices">SSDLC Practices<a class="headerlink" href="#ssdlc-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Static Code Analysis</strong>: Integrate tools like Clippy (for Rust) to enforce coding standards and catch vulnerabilities
+  early.</li>
+<li><strong>Dependency Management</strong>: Regularly update dependencies to minimize risks from third-party libraries.</li>
+<li><strong>Threat Modeling</strong>: Conduct threat modeling exercises for critical services, focusing on payment workflows.</li>
+<li><strong>Secure Code Reviews</strong>: Enforce mandatory peer reviews for code changes.</li>
+<li><strong>Automated Testing</strong>: Comprehensive unit, integration, and regression tests for all services.</li>
+</ul>
+<hr />
+<h2 id="5-building-block-view-architecture-overview">5. Building Block View (Architecture Overview)<a class="headerlink" href="#5-building-block-view-architecture-overview" title="Permanent link">&para;</a></h2>
+<h3 id="core-components">Core Components<a class="headerlink" href="#core-components" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>API Gateway (Rust)</strong>:</p>
+<ul>
+<li>Centralized service for routing API requests and enforcing authentication and authorization.</li>
+<li>Routes requests to appropriate services, including <strong>Payment Service</strong>, <strong>Customer Service</strong>, and <strong>Merchant
+  Service</strong>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Merchant Dashboard (Frontend)</strong>:</p>
+<ul>
+<li>Built with <strong>Next.js</strong> for an interactive, real-time dashboard where merchants can manage transactions, request
+  payouts, and access reports.</li>
+</ul>
+</li>
+<li>
+<p><strong>Microservices</strong>:</p>
+<ul>
+<li><strong>Payment Service</strong>: Manages payment initiation, status checks, and error handling.</li>
+<li><strong>Customer Service</strong>: Manages customer actions, including payment setup and subscriptions.</li>
+<li><strong>Merchant Service</strong>: Handles merchant account details, API key issuance, and other business logic.</li>
+<li><strong>Webhook Service</strong>: Dedicated service for sending real-time notifications to external systems.</li>
+</ul>
+</li>
+<li>
+<p><strong>Database (PostgreSQL)</strong>:</p>
+<ul>
+<li>Primary storage with support for structured data, multi-tenancy, and full-text search.</li>
+</ul>
+</li>
+<li>
+<p><strong>Storage Service (Minio)</strong>:</p>
+<ul>
+<li>Stores immutable data such as receipts, invoices, proof-of-purchase PDFs, user-uploaded documents, and backups.</li>
+</ul>
+</li>
+</ol>
+<h3 id="component-diagram">Component Diagram<a class="headerlink" href="#component-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph TD
+    A[API Gateway] --&gt; B[Payment Service]
+    A --&gt; C[Merchant Service]
+    A --&gt; D[Customer Service]
+    A --&gt; E[Webhook Service]
+    B --&gt; F[PostgreSQL]
+    C --&gt; F
+    D --&gt; F
+    E --&gt; F
+    B --&gt; G[Minio Storage]
+    C --&gt; G
+    D --&gt; G
+    E --&gt; G
+    H["Frontend (Next.js)"] --&gt; A</code></pre>
+<hr />
+<h2 id="6-runtime-view">6. Runtime View<a class="headerlink" href="#6-runtime-view" title="Permanent link">&para;</a></h2>
+<h3 id="example-workflow-payment-process">Example Workflow: Payment Process<a class="headerlink" href="#example-workflow-payment-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Merchant Setup</strong>: A merchant creates an account, obtains API credentials, and configures payment settings.</li>
+<li><strong>Payment Initiation</strong>:<ul>
+<li>A customer initiates payment via the merchant’s platform, triggering an API call to the <strong>Payment Service</strong>.</li>
+<li>The <strong>API Gateway</strong> routes the request to the appropriate service.</li>
+</ul>
+</li>
+<li><strong>Payment Processing</strong>:<ul>
+<li>Upon confirmation, the transaction is recorded in the <strong>PostgreSQL ledger</strong>, maintaining a double-entry for debit
+  and credit.</li>
+<li>The <strong>Payment Service</strong> sends a real-time update to the merchant's dashboard and, if applicable, a webhook to
+  external systems.</li>
+</ul>
+</li>
+</ol>
+<h3 id="runtime-diagram">Runtime Diagram<a class="headerlink" href="#runtime-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>sequenceDiagram
+    participant Merchant
+    participant API_Gateway
+    participant Payment_Service
+    participant Payment_Provider
+    participant PostgreSQL
+    Merchant -&gt;&gt; API_Gateway: Initiate Payment
+    API_Gateway -&gt;&gt; Payment_Service: Process Payment Request
+    Payment_Service -&gt;&gt; Payment_Provider: API Request
+    Payment_Provider --&gt;&gt; Payment_Service: Confirm Payment
+    Payment_Service -&gt;&gt; PostgreSQL: Record Transaction
+    Payment_Service --&gt;&gt; API_Gateway: Success Response
+    API_Gateway --&gt;&gt; Merchant: Payment Confirmed</code></pre>
+<hr />
+<h2 id="7-deployment-view">7. Deployment View<a class="headerlink" href="#7-deployment-view" title="Permanent link">&para;</a></h2>
+<h3 id="infrastructure-components">Infrastructure Components<a class="headerlink" href="#infrastructure-components" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Kubernetes Cluster</strong>: EKS or GKE, with separate namespaces for dev, staging, and production.</li>
+<li><strong>Service Pods</strong>: Each microservice (e.g., Payment Service, Webhook Service) is deployed as a separate pod, managed
+   by Helm.</li>
+<li><strong>PostgreSQL</strong>: Cloud-hosted database (Neon.tech for PoC, AWS RDS for production).</li>
+<li><strong>S3 Storage (Minio)</strong>: S3-compatible storage for immutable data management, optionally connected to a CDN.</li>
+<li><strong>Authentication</strong>: <strong>Keycloak</strong> for centralized user and service authentication.</li>
+</ol>
+<h3 id="deployment-diagram">Deployment Diagram<a class="headerlink" href="#deployment-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>graph LR
+    A[Kubernetes Cluster]
+    A --&gt; B[Namespace: Dev]
+    A --&gt; C[Namespace: Staging]
+    A --&gt; D[Namespace: Production]
+    D --&gt; E[API Gateway]
+    D --&gt; F[Payment Service]
+    D --&gt; G[Merchant Service]
+    D --&gt; H[PostgreSQL]
+    D --&gt; I[S3 Storage]
+    D --&gt; J[Webhook Service]
+    D --&gt; K[Keycloak]</code></pre>
+<hr />
+<h2 id="8-cross-cutting-concerns">8. Cross-Cutting Concerns<a class="headerlink" href="#8-cross-cutting-concerns" title="Permanent link">&para;</a></h2>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>API Security</strong>: JWT for user access, API keys for merchant integrations, and secure header validation.</li>
+<li><strong>Encryption</strong>: HTTPS for all data transfer, with mTLS within Kubernetes for secure service-to-service communication.</li>
+<li><strong>RBAC</strong>: Permissions tailored for admins, merchants, and clients.</li>
+</ul>
+<h3 id="logging-and-monitoring">Logging and Monitoring<a class="headerlink" href="#logging-and-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Sentry</strong>: Captures errors and exceptions for debugging.</li>
+<li><strong>Prometheus and Grafana</strong>: Used to monitor database performance, API response times, and memory/CPU utilization for
+  each pod.</li>
+</ul>
+<h3 id="error-handling">Error Handling<a class="headerlink" href="#error-handling" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Global Error Handling</strong>: Centralized error handling for all services.</li>
+<li><strong>Circuit Breakers</strong>: Prevents cascading failures in case of issues with external payment providers.</li>
+</ul>
+<h3 id="ssdlc-practices_1">SSDLC Practices<a class="headerlink" href="#ssdlc-practices_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Automated Code Scans</strong>: Integrate tools like RustSec for dependency analysis.</li>
+<li><strong>Runtime Security Monitoring</strong>: Use Falco or similar tools to detect abnormal behavior in Kubernetes.</li>
+<li><strong>Periodic Penetration Testing</strong>: Ensure external-facing services are secure against known vulnerabilities.</li>
+</ul>
+<hr />
+<h2 id="9-architectural-decisions">9. Architectural Decisions<a class="headerlink" href="#9-architectural-decisions" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Rust for Backend</strong>: Ensures high performance, low memory usage, and secure code.</li>
+<li><strong>PostgreSQL as Main Database</strong>: Structured data storage with multi-tenant support, using schema separation for
+   tenant data.</li>
+<li><strong>Minio for Storage</strong>: S3 compatibility for immutable asset management, simplifying CDN integration.</li>
+<li><strong>Helm and Kubernetes</strong>: Effective for managing different environments (dev, staging, production) with easy scaling.</li>
+</ol>
+<hr />
+<h2 id="10-quality-requirements">10. Quality Requirements<a class="headerlink" href="#10-quality-requirements" title="Permanent link">&para;</a></h2>
+<h3 id="performance">Performance<a class="headerlink" href="#performance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Response Time</strong>: Average API response within 200-300ms.</li>
+<li><strong>Scalability</strong>: Scale pods horizontally based on demand.</li>
+</ul>
+<h3 id="security_1">Security<a class="headerlink" href="#security_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Data Encryption</strong>: HTTPS and mTLS within Kubernetes.</li>
+<li><strong>Regular Audits</strong>: Security audits for code and infrastructure.</li>
+</ul>
+<h3 id="availability">Availability<a class="headerlink" href="#availability" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Target</strong>: 99.9% uptime, leveraging Kubernetes autoscaling and failover mechanisms.</li>
+</ul>
+<hr />
+<h2 id="11-risks-and-technical-debt">11. Risks and Technical Debt<a class="headerlink" href="#11-risks-and-technical-debt" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Dependency on Payment Providers</strong>: Reliance on MTN and Orange APIs may introduce availability risks.</li>
+<li><strong>Scaling PostgreSQL</strong>: Potential performance limitations as data grows, requiring sharding or indexing strategies.</li>
+<li><strong>Eventual Consistency</strong>: Asynchronous processing could lead to temporary inconsistencies; monitoring and retries are
+   required.</li>
+</ol>
+<hr />
+<h2 id="12-glossary">12. Glossary<a class="headerlink" href="#12-glossary" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>MoMo</strong>: MTN Mobile Money service for local transactions.</li>
+<li><strong>Double-entry Ledger</strong>: System to log each transaction with both debit and credit for accuracy.</li>
+<li><strong>Merchant</strong>: Business entity using the platform for payment processing.</li>
+<li><strong>Payout</strong>: Process by which funds are transferred from the platform to the merchant.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
